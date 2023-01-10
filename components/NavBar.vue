@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full  p-5 bg-transparent">
+  <nav class="w-full  p-5 bg-transparent" style="font-family: 'Montserrat', sans-serif !important;">
     <div class="flex items-center justify-between">
       <!-- Header logo -->
       <div class="h-10">
@@ -25,7 +25,7 @@
 
       <!-- Navbar -->
       <div class="hidden md:block">
-        <ul class="flex space-x-5 text-sm font-sans">
+        <ul class="flex space-x-5 text-sm font-sans" style="font-family: 'Montserrat', sans-serif !important;">
           <li>
             <NuxtLink to="/" class="active border-b-2 border-blue-500 pb-1">
               Home
@@ -33,10 +33,9 @@
           </li>
           <li>
             <NuxtLink to="/product">
-              Services
+              Tickets
             </NuxtLink>
           </li>
-
           <li>
             <NuxtLink to="/about">
               About
@@ -104,22 +103,17 @@
           </li>
           <li>
             <NuxtLink to="/about" class="my-4 inline-block" @click="isOpen = false">
-              Services
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/pordz" class="my-4 inline-block" @click="isOpen = false">
-              Features
+              About
             </NuxtLink>
           </li>
           <li><a href="#" class="my-4 inline-block" @click="isOpen = false">FAQ</a></li>
           <li><a href="#" class="my-4 inline-block" @click="isOpen = false">Contact</a></li>
           <li>
-            <a
-              href="#"
+            <NuxtLink
+              to="/sign"
               class="my-8 w-full text-center font-semibold cta inline-block bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white"
               @click="isOpen = false"
-            >Sign Up</a>
+            >Sign Up</NuxtLink>
           </li>
         </ul>
 

@@ -8,13 +8,13 @@ export const getters = {
 }
 export const actions = {
   async fetchPosts (ctx) {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users')
+    const res = await fetch('https://jsonplaceholder.typicode.com/users?_limit=10')
     const users = await res.json()
-    ctx.commit('updatePosts', users)
+    ctx.commit('onChangePage', users)
   }
 }
 export const mutations = {
-  updatePosts: (state, users) => {
+  onChangePage: (state, users) => {
     state.users = users
   }
 }

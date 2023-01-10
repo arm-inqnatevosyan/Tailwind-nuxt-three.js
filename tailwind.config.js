@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
   content: [
     './components/**/*.{js,vue}',
     './pages/**/*.vue',
@@ -12,9 +11,20 @@ module.exports = {
         '3xl': '0px 0px 10px 2px'
       },
       height: {
-        '2x': '80vh'
+        '2x': '80vh',
+        '2xx': '50vh'
+      },
+      margin: {
+        '2x': '800px',
+        '2xx': '1200px'
+      },
+      screens: {
+        'sms': '350px'
+      },
+      fontFamily: {
+        Rampart: ["Rampart One", "cursive"],
       }
     }
   },
-  plugins: []
+  plugins: [require('tw-elements/dist/plugin')]
 }

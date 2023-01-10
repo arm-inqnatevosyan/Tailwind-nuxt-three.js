@@ -1,4 +1,3 @@
-<!--suppress CssUnknownTarget -->
 <template>
   <div>
     <NavBar />
@@ -148,6 +147,7 @@ export default {
 footer {
   width: 100%;
   display: flex;
+  margin-top: 60px;
 }
 
 footer ul {

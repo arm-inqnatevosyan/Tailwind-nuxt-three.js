@@ -101,6 +101,7 @@ form p {
 footer {
   width: 100%;
   display: flex;
+  margin-top: 55px;
 }
 
 footer ul {
