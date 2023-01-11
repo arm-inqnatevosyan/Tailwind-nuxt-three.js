@@ -12,7 +12,7 @@ module.exports = {
       },
       height: {
         '2x': '80vh',
-        '2xx': '50vh'
+        '2xx': '100vh'
       },
       margin: {
         '2x': '800px',

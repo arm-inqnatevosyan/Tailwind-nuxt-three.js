@@ -59,6 +59,6 @@ export default {
 
 <style scoped>
 #bg{
-  background: url("../assets/img/img.png");
+  background: url("static/img.png");
 }
 </style>

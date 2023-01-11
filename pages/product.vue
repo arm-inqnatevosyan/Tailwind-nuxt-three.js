@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavBar/>
+    <NavBar />
     <div>
       <div class="flex items-center justify-center font-Rampart">
         <h1 class="text-3xl text-sky-500 font-semibold">Cards For Jobs</h1>
@@ -12,7 +12,7 @@
             id="bg"
           >
             <div class="absolute top-0 left-0 w-full">
-              <img src="https://mdbootstrap.com/img/new/slides/034.jpg" class="w-full h-[288px] sm:w-full" alt="..."/>
+              <img src="https://mdbootstrap.com/img/new/slides/034.jpg" class="w-full h-[288px] sm:w-full" alt="..." />
             </div>
             <div class="absolute text-white">
               <div class="font-bold">
@@ -64,7 +64,7 @@
       <div class="carousel-inner relative w-full overflow-hidden md:w-full sms:w-full">
         <div class="carousel-item active float-left w-full">
           <img
-            src="../assets/img/slider1.jpg"
+            src="/slider1.jpg"
             class="block w-full"
             alt="Wild Landscape"
           />
@@ -75,7 +75,7 @@
         </div>
         <div class="carousel-item float-left w-full">
           <img
-            src="../assets/img/slider2.jpg"
+            src="/slider2.jpg"
             class="block w-full"
             alt="Camera"
           />
@@ -86,7 +86,7 @@
         </div>
         <div class="carousel-item float-left w-full">
           <img
-            src="../assets/img/slider3.jpg"
+            src="/slider3.jpg"
             class="block w-full"
             alt="Exotic Fruits"
           />
@@ -134,8 +134,4 @@ export default {
 </script>
 
 <style scoped>
-#btn-back-to-top {
-  position: fixed;
-  display: none;
-}
 </style>
