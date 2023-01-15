@@ -23,6 +23,9 @@ module.exports = {
       },
       fontFamily: {
         Rampart: ["Rampart One", "cursive"],
+      },
+      width: {
+        pag: '417px'
       }
     }
   },

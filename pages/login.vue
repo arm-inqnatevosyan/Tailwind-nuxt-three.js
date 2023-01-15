@@ -1,34 +1,63 @@
 <template>
-  <div>
-    <NavBar/>
-    <form>
-      <h1>Instagram</h1>
-      <input id="input" type="text" required placeholder="Name User"><br>
-      <input id="input" type="text" required placeholder="Password">
-      <p>
-        Люди, которые пользуются нашим сервисом,
-      </p>
-      <p> могли загрузить вашу контактную информацию в Instagram. Подробнее</p>
-      <p>Регистрируясь, вы принимаете наши Условия,</p>
-      <p>Политику конфиденциальности и Политику в</p>
-      <p>отношении файлов cookie.</p>
-      <input type="submit" placeholder="Registration" class="submit">
-    </form>
-    <footer>
-      <ul>
-        <li>Meta</li>
-        <li>Информация</li>
-        <li>Блог</li>
-        <li>Вакансии</li>
-        <li>API</li>
-        <li>Конфиденциальность</li>
-        <li>Условия</li>
-        <li>Популярные аккаунты</li>
-        <li>Хэштеги</li>
-        <li>Места</li>
-        <li>Instagram Lite</li>
-      </ul>
-    </footer>
+  <div class="bg">
+    <NavBar class="xl:text-white sm:text-black"/>
+    <div class="flex justify-center items-center mt-52">
+      <div class="w-full max-w-xs">
+        <form class="bg-white shadow-3xl shadow-cyan-500/50  rounded px-8 pt-6 pb-8 mb-4">
+          <div class="identity-input mb-4">
+            <label
+              for="identity"
+              class="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Email</label>
+            <input
+              id="identity"
+              class="shadow border border-gray-400 appearance-none borderrounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              placeholder="Email"
+              aria-describedby="emailHelp"
+              v-model="email"
+            />
+            <span class="text-xs text-red-700" id="emailHelp"></span>
+          </div>
+
+          <div class="password-input mb-6">
+            <label
+              for="identity"
+              class="block text-gray-700 text-sm font-bold mb-2"
+            >Password</label
+            >
+
+            <input
+              aria-describedby="passwordHelp"
+              v-model="password"
+
+              class="shadow border border-gray-400 appearance-none borderrounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="password"
+              placeholder="*******"
+            />
+
+            <span class="text-xs text-red-700" id="passwordHelp"></span>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-600 hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Log In
+            </button>
+            <a
+              class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+              href="#"
+            >
+              Forgot Password?
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -36,114 +65,25 @@ import NavBar from '@/components/NavBar.vue'
 
 export default {
   name: 'LoginVue',
-  components: { NavBar }
+  components: { NavBar },
+  data () {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    login () {
+      console.log('logging in')
+    }
+  }
 }
 </script>
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
-form {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10px auto;
-  text-align: left;
-  height: 80vh;
-  border: 1px solid rgba(128, 128, 128, 0.363);
-  color: black;
-}
-
-form h1 {
-  font-family: 'Lobster', cursive;
-  font-weight: 400;
-  font-size: 40px;
-  color: black;
-  margin-bottom: 20px;
-}
-
-#input:invalid:required {
-  border: 1px solid red;
-}
-
-form input {
-  width: 380px;
-  height: 40px;
-  outline: none;
-  border: none;
-  color: rgb(65, 62, 62) !important;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding-left: 10px;
-  border-radius: 5px;
-}
-
-::-webkit-input-placeholder {
-  color: grey;
-}
-
-.submit {
-  color: white !important;
-  background-color: rgb(40, 166, 224);
-  margin-top: 50px;
-}
-
-form p {
-  width: 380px;
-  text-align: center;
-  margin-top: 20px;
-  line-height: 23px;
-  font-size: 13px;
-  color: rgb(63, 61, 61);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-footer {
+.bg{
   width: 100%;
-  display: flex;
-  margin-top: 55px;
-}
-
-footer ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-}
-
-footer ul li {
-  text-decoration: none;
-  font-family: sans-serif;
-  color: grey !important;
-  font-size: 13px;
-}
-
-@media (max-width: 992px) {
-  form {
-    width: 90%;
-    border: none;
-  }
-
-  footer {
-    display: none;
-  }
-
-  footer ul li {
-    margin-top: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  form input {
-    width: 300px;
-  }
-
-  form {
-    margin-right: 30px;
-  }
-
-  form .submit {
-    width: 200px;
-  }
+  height: 100vh;
+  background-size: cover;
+  background: url("../static/logins.jpg") center;
 }
 </style>
