@@ -42,6 +42,11 @@
             </NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/three">
+              Travel
+            </NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/login" class="cta bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white font-semibold">
               Log
               In
@@ -109,6 +114,11 @@
           <li>
             <NuxtLink to="/product" class="my-4 inline-block" @click="isOpen = false">
               Products
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/three" class="my-4 inline-block" @click="isOpen = false">
+              Travel
             </NuxtLink>
           </li>
           <li><a href="#" class="my-4 inline-block" @click="isOpen = false">Contact</a></li>
