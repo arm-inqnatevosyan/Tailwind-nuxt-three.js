@@ -61,7 +61,7 @@ export default {
 
     const loader = new GLTFLoader()
 
-    loader.load('http://192.168.1.6:1003/scene.gltf', function (gltf) {
+    loader.load('model/scene.gltf', function (gltf) {
       const mesh = gltf.scene.children[0]
       mesh.position.y = -2
       mesh.position.z = -5
